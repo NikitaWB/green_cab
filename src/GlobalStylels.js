@@ -9,11 +9,10 @@ const GlobalStyle = createGlobalStyle`
 h1, h2, h3{
     font-family: 'Merienda', cursive;
     }
-    p, a,{
+    p, a{
     font-family: 'Gemunu Libre', sans-serif;
     font-size: large;
     }
-}
 `
 
 export default GlobalStyle;
