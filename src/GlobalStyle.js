@@ -32,11 +32,11 @@ body{
     background-color: ${props => props.theme.body};
 }
 h1, h2, h3{
-    font-family: 'Merienda', cursive;
+    font-family: 'Indie Flower', cursive;
     color: ${props => props.theme.h3};
     }
     p, a{
-    font-family: 'Gemunu Libre', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: large;
     color: ${props => props.theme.p};
     }

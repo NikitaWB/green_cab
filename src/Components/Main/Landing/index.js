@@ -4,7 +4,7 @@ import { Button } from '../../../GlobalStyle';
 import styled from 'styled-components';
 
 const StyledLanding = styled.div`
-h3{
+h2{
     margin: 10px;
 }
 p{
@@ -16,7 +16,7 @@ p{
 function Landing() {
     return (
         <StyledLanding>
-            <h3>Hej Nikita, Välkommen tillbaka!</h3>
+            <h2>Hej Nikita, Välkommen tillbaka!</h2>
             <p>Nu kan du boka en grön taxi och få 10% rabatt på din nästa resa.</p>
             <Button>
                 <Link to='/search'>Sök resa</Link>

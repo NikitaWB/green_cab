@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Toggle from 'react-styled-toggle';
 
 const StyledHeader = styled.header`
-background: #BAE6A2 100%;
+background: linear-gradient(0deg, #8CC96D 0%, #478E23 100%);
   color: white;
   h1 {
     padding: 10px 0px 10px 20px;
