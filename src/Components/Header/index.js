@@ -11,12 +11,12 @@ background: #BAE6A2 100%;
   
 `
 
-function Header(handleToggle) {
+function Header({handleToggle}) {
 
     return (
         <StyledHeader>
             <h1>GreenCab</h1>
-            <Toggle onChange={handleToggle}/>
+            <Toggle onChange={() => handleToggle()}/>
         </StyledHeader>
     )
 }
