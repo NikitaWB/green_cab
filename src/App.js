@@ -1,23 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import Components from "./Components";
-import GlobalStyle from "./GlobalStyle";
-/* import styled, {ThemeProvider} from "styled-components"; */
+import { GlobalStyle, darkTheme, lightTheme } from "./GlobalStyle";
+import {ThemeProvider} from "styled-components";
 
 
 function App() {
-/*   const [theme, setTheme] = useState('light')
+
+  const [theme, setTheme] = useState('light');
 
   const handleToggle = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
-  } */
-
-  /* <ThemeProvider theme={theme === 'light' ? darkTheme : lightTheme}></ThemeProvider> */
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  }
 
   return (
-    <>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalStyle />
-      <Components />
-    </>
+      <Components handleToggle={handleToggle}/>
+    </ThemeProvider>
   );
 }
 

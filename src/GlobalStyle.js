@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const lightTheme = {
-    body: '#F7F9F8',
+    body: '#DBF5AE',
     li: '#081c15',
     a: '#081c15',
     button:'#8CC96D',
@@ -19,11 +19,14 @@ export const darkTheme = {
     label: '#F7F9F8',
 }
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-color: ${props => props.theme.body};
 }
 h1, h2, h3{
     font-family: 'Merienda', cursive;
@@ -33,5 +36,3 @@ h1, h2, h3{
     font-size: large;
     }
 `
-
-export default GlobalStyle;

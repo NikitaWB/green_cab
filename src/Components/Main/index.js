@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Landing from "./Landing";
 import SearchDestinationForm from './SearchDestinationForm';
 
-const StyledMain = styled.main`
-background: #DBF5AE;
+const StyledMain = styled.div`
+/* background: #DBF5AE; */
 min-height: 95vh;
 margin: 0;
 padding: 75px;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components';
-import Switch from '../Switch';
+import Toggle from 'react-styled-toggle';
 
 const StyledHeader = styled.header`
 background: #BAE6A2 100%;
@@ -11,14 +11,12 @@ background: #BAE6A2 100%;
   
 `
 
-function Header() {
-
-  const [isToggled, setIsToggled] = useState(false)
+function Header(handleToggle) {
 
     return (
         <StyledHeader>
             <h1>GreenCab</h1>
-            <Switch rounded={true} isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)}/>
+            <Toggle onChange={handleToggle}/>
         </StyledHeader>
     )
 }

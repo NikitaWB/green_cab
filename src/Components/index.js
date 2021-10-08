@@ -3,10 +3,11 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './Header'
 import Main from './Main'
 
-function Components() {
+
+function Components(handleToggle) {
     return (
         <Router>
-            <Header />
+            <Header handleToggle={handleToggle}/>
             <Main />
         </Router>
     )
