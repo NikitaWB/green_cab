@@ -1,32 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '../../../GlobalStyle';
 import styled from 'styled-components';
 
-
-const Button = styled.button`
-  background: linear-gradient(100deg, #8CC96D 0%, #478E23 100%);
-  color: white;
-  font-size: 1.5em;
-  margin: 1.6em;
-  padding: 0.5em 1em;
-  border: 1px solid white;
-  border-radius: 3px;
-  box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
-  bottom: 0;
+const StyledLanding = styled.div`
+h3{
+    margin: 10px;
+}
+p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 `
-
 
 function Landing() {
     return (
-        <>
+        <StyledLanding>
             <h3>Hej Nikita, Välkommen tillbaka!</h3>
-            <br></br>
             <p>Nu kan du boka en grön taxi och få 10% rabatt på din nästa resa.</p>
-            <br></br>
             <Button>
                 <Link to='/search'>Sök resa</Link>
             </Button>
-        </>
+        </StyledLanding>
     )
 }
 
