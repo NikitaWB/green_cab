@@ -44,9 +44,10 @@ h1, h2, h3{
 export const Button = styled.button`
   background: linear-gradient(180deg, #8CC96D 0%, #478E23 100%);
   color: white;
+  text-decoration: none;
   font-size: 1.2em;
   width: 216px;
-  hight: 45px;
+  height: 45px;
   margin: 15px;
   padding: 10px;
   border: 1px solid white;

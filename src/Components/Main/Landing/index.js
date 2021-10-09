@@ -11,15 +11,18 @@ p{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+{
+    text-decoration: none;
+}
 `
 
 function Landing() {
     return (
         <StyledLanding>
-            <h2>Hej Nikita, Välkommen tillbaka!</h2>
+            <h2>Hej Nikita,<br/>Välkommen tillbaka!</h2>
             <p>Nu kan du boka en grön taxi och få 10% rabatt på din nästa resa.</p>
             <Button>
-                <Link to='/search'>Sök resa</Link>
+                <Link to='/search' style={{ textDecoration: 'none' }}>Sök resa</Link>
             </Button>
         </StyledLanding>
     )

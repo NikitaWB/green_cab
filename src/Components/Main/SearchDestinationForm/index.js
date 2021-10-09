@@ -29,7 +29,7 @@ function SearchDestinationForm() {
             <input type='text' onChange={handleChange} placeholder='Åka från..' name='searchfrom'/>
             <input type='text' placeholder='Åka till..' name='searchto'/>
             <Button>
-                <Link to='/'>Välj bil</Link>
+                <Link to='/' style={{ textDecoration: 'none' }}>Välj bil</Link>
             </Button>
         </form>
         </StyledInput>
