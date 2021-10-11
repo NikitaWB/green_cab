@@ -7,7 +7,7 @@ import Logo from '../../../images/logo';
 
 const StyledLanding = styled.div`
 h2{
-    margin: 10px;
+    margin-top: 50px;
 }
 p{
     margin-top: 50px;
@@ -21,9 +21,9 @@ function Landing() {
             <Logo />
             <h2>Hej Nikita,<br/>Välkommen tillbaka!</h2>
             <p>Nu kan du boka en grön taxi och få 10% rabatt på din nästa resa.</p>
-            <Button>
-                <Link to='/search' style={{ textDecoration: 'none' }}>Sök resa</Link>
-            </Button>
+            <Link to='/search' style={{ textDecoration: 'none' }}>
+                <Button>Sök resa</Button>
+            </Link>
         </StyledLanding>
     )
 }

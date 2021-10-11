@@ -2,8 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 
 export const lightTheme = {
-    body: '#DBF5AE',
-    li: '#081c15',
+    body: '#F7F9F8' /* '#DBF5AE' */,
     a: '#081c15',
     button:'#8CC96D',
     input: '#e5e5e5',
@@ -14,12 +13,10 @@ export const darkTheme = {
     body: '#081c15',
     h2: '#FFFFFF' ,
     h3: '#FFFFFF' ,
-    li: '#F7F9F8',
     a: '#F7F9F8',
     p: 'white',
-    button: '#478E23',
     input: '#F7F9F8',
-    label: '#F7F9F8',
+    label: '#FFFFFF',
 }
 
 export const GlobalStyle = createGlobalStyle`
@@ -35,7 +32,7 @@ h1, h2, h3{
     font-family: 'Indie Flower', cursive;
     color: ${props => props.theme.h3};
     }
-    p, a{
+    p, a, label{
     font-family: 'Roboto', sans-serif;
     font-size: large;
     color: ${props => props.theme.p};
@@ -52,6 +49,7 @@ export const Button = styled.button`
   padding: 10px;
   border: 1px solid white;
   border-radius: 20px;
-  box-shadow: 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.25);
   bottom: 0;
+  cursor: pointer;
 `
