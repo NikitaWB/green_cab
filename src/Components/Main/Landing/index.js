@@ -11,7 +11,7 @@ h2{
 }
 p{
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 `
 

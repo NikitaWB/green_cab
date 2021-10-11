@@ -5,16 +5,15 @@ import Landing from "./Landing";
 import SearchDestinationForm from './SearchDestinationForm';
 
 const StyledMain = styled.div`
-/* background: #DBF5AE; */
-min-height: 95vh;
+min-height: 50%;
 margin: 0;
-padding: 30px;
+padding: 30px 25px;
 text-align: center;
 display: flex;
 flex-direction: column;
 
 h2{
-    margin: 0px 0 50px 0;
+    margin: 20px 0 40px 0;
 }
 `
 

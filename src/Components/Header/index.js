@@ -4,11 +4,9 @@ import Toggle from 'react-styled-toggle';
 
 const StyledHeader = styled.header`
 background: linear-gradient(0deg, #8CC96D 0%, #478E23 100%);
-  color: white;
-  h1 {
-    padding: 10px 0px 10px 20px;
-  }
-  
+color: white;
+padding: 10px 0px 10px 20px;
+align-content: ;
 `
 
 function Header({handleToggle}) {
@@ -17,7 +15,7 @@ function Header({handleToggle}) {
         <StyledHeader>
             <h1>GreenCab</h1>
             <Toggle onChange={() => handleToggle()}
-            labelRight='Ändra tema'
+            labelRight='Byt tema'
             backgroundColorButton='#478E23' 
             backgroundColorUnchecked='#081c15' 
             backgroundColorChecked='#F7F9F8'
