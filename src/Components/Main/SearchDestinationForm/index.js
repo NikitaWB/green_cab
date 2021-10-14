@@ -30,9 +30,13 @@ input[type='text'] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-
-.radio_input:checked + .radio_label {
+/* Test 1 för intryckt radio */
+.radio_input:checked .radio_label {
     background: 'blue';
+}
+/* Test 2 för intryckt radio */
+.radio input[type="radio"]:checked + .radio_label {
+    background-color:#bfb;
 }
 
 `
