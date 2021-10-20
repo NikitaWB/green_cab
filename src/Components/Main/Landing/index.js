@@ -10,6 +10,7 @@ h2{
     margin-top: 50px;
 }
 p{
+    padding: 0rem 1.5rem;
     margin-top: 50px;
     margin-bottom: 70px;
 }

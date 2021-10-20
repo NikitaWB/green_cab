@@ -10,7 +10,9 @@ input[type='text'] {
 }
 
 .radio {
-    display: inline-flex;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
     overflow: hidden;
 }
 
@@ -21,22 +23,20 @@ input[type='text'] {
 .radio_label {
     background: linear-gradient(180deg, #8CC96D 0%, #478E23 100%);
     color: white;
-    font-size: 0.95em;
+    font-size: 1em;
     height: 45px;
+    width: 130px;
+    text-align: center;
     margin: 10px 10px 20px;
-    padding: 8px 14px;
+    padding: 12px 0px;
     border-radius: 20px;
     border: 1px solid white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 /* Test 1 för intryckt radio */
-.radio_input:checked .radio_label {
-    background: 'blue';
-}
-/* Test 2 för intryckt radio */
-.radio input[type="radio"]:checked + .radio_label {
-    background-color:#bfb;
+.radio_input:checked + .radio_label {
+    background: blue;
 }
 
 `
@@ -60,12 +60,12 @@ function SearchDestinationForm() {
                 <input type='text' placeholder='Åka till..' name='searchto'/>
                 <br/>
                 <div className='radio'>
-                    <label className='radio_label' htmlFor='now' >Åka nu</label>
                     <input className='radio_input' type='radio' name='when' value='now' id='now' />
-                    <label className='radio_label' htmlFor='departure'>Avgång</label>
+                    <label className='radio_label' htmlFor='now' >Åka nu</label>
                     <input className='radio_input' type='radio' name='when' value='departure' id='departure' />
-                    <label className='radio_label' htmlFor='arrival'>Ankomst</label>
+                    <label className='radio_label' htmlFor='departure'>Avgång</label>
                     <input className='radio_input' type='radio' name='when' value='arrival' id='arrival' />
+                    <label className='radio_label' htmlFor='arrival'>Ankomst</label>
                 </div>
                 <Link to='/' style={{ textDecoration: 'none' }}>
                     <Button>Välj bil</Button>

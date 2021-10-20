@@ -7,7 +7,6 @@ import SearchDestinationForm from './SearchDestinationForm';
 const StyledMain = styled.div`
 min-height: 50%;
 margin: 0;
-padding: 30px 25px;
 text-align: center;
 display: flex;
 flex-direction: column;
