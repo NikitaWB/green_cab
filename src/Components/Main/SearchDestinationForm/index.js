@@ -60,11 +60,11 @@ function SearchDestinationForm() {
                 <input type='text' placeholder='Åka till..' name='searchto'/>
                 <br/>
                 <div className='radio'>
-                    <label className='radio_label' for='now' >Åka nu</label>
+                    <label className='radio_label' htmlFor='now' >Åka nu</label>
                     <input className='radio_input' type='radio' name='when' value='now' id='now' />
-                    <label className='radio_label' for='departure'>Avgång</label>
+                    <label className='radio_label' htmlFor='departure'>Avgång</label>
                     <input className='radio_input' type='radio' name='when' value='departure' id='departure' />
-                    <label className='radio_label' for='arrival'>Ankomst</label>
+                    <label className='radio_label' htmlFor='arrival'>Ankomst</label>
                     <input className='radio_input' type='radio' name='when' value='arrival' id='arrival' />
                 </div>
                 <Link to='/' style={{ textDecoration: 'none' }}>
