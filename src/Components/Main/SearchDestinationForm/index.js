@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from '../../../GlobalStyle';
+import ReactMapGL from 'react-map-gl'
 
 const StyledInput = styled.div`
 input[type='text'] {
@@ -25,20 +26,19 @@ input[type='text'] {
     color: white;
     font-size: 1em;
     height: 45px;
-    width: 130px;
+    width: 120px;
     text-align: center;
     margin: 10px 10px 20px;
     padding: 12px 0px;
     border-radius: 20px;
     border: 1px solid white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-/* Test 1 för intryckt radio */
 .radio_input:checked + .radio_label {
-    background: blue;
+    background: linear-gradient(180deg, #4D8C2D 0%, #8CC96D 100%);
+    border: 1px solid black;
 }
-
 `
 
 function SearchDestinationForm() {
@@ -51,6 +51,15 @@ function SearchDestinationForm() {
         console.log('Submited');
         e.preventDefault();
     }
+
+    const [viewport, setViewport] = useState({
+        width: '100%',
+        height: '300px',
+        latitude: 59.33258,
+        longitude: 18.0649,
+        zoom: 11
+        
+      });
 
     return (
         <StyledInput>
@@ -67,6 +76,12 @@ function SearchDestinationForm() {
                     <input className='radio_input' type='radio' name='when' value='arrival' id='arrival' />
                     <label className='radio_label' htmlFor='arrival'>Ankomst</label>
                 </div>
+                <p>datepicker</p>
+                <ReactMapGL
+                    mapboxApiAccessToken={'pk.eyJ1IjoibmlraXRhYnV5b25kbyIsImEiOiJja3Y2aXZxM20wNThmMm9xdWV5NHNqYWptIn0.d48wPJak6j_XYmBP-udUzw'}
+                    mapStyle='mapbox://styles/mapbox/dark-v9'
+                    {...viewport} 
+                    onViewportChange={nextViewport => setViewport(nextViewport)} />
                 <Link to='/' style={{ textDecoration: 'none' }}>
                     <Button>Välj bil</Button>
                 </Link>

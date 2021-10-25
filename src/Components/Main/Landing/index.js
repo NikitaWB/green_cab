@@ -7,12 +7,12 @@ import Logo from '../../../images/logo';
 
 const StyledLanding = styled.div`
 h2{
-    margin-top: 50px;
+    margin-top: 60px;
 }
 p{
     padding: 0rem 1.5rem;
     margin-top: 50px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 }
 `
 
