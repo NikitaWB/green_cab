@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Landing from "./Landing";
 import SearchDestinationForm from './SearchDestinationForm';
+import SelectCar from './SelectCar';
 
 const StyledMain = styled.div`
 min-height: 50%;
@@ -12,7 +13,7 @@ display: flex;
 flex-direction: column;
 
 h2{
-    margin: 20px 0 40px 0;
+    margin: 20px 0 20px 0;
 }
 `
 
@@ -26,6 +27,9 @@ function Main() {
                 </Route>
                 <Route path='/search'>
                     <SearchDestinationForm />
+                </Route>
+                <Route path='/selectcar'>
+                    <SelectCar />
                 </Route>
             </Switch>
         </StyledMain>

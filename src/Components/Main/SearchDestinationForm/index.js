@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Button } from '../../../GlobalStyle';
-import ReactMapGL from 'react-map-gl'
+import ReactMapGL from 'react-map-gl';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const StyledInput = styled.div`
 input[type='text'] {
@@ -52,13 +54,14 @@ function SearchDestinationForm() {
         e.preventDefault();
     }
 
+    const [startDate, setStartDate] = useState(new Date());
+
     const [viewport, setViewport] = useState({
         width: '100%',
         height: '300px',
         latitude: 59.33258,
         longitude: 18.0649,
         zoom: 11
-        
       });
 
     return (
@@ -76,13 +79,13 @@ function SearchDestinationForm() {
                     <input className='radio_input' type='radio' name='when' value='arrival' id='arrival' />
                     <label className='radio_label' htmlFor='arrival'>Ankomst</label>
                 </div>
-                <p>datepicker</p>
+                <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                 <ReactMapGL
                     mapboxApiAccessToken={'pk.eyJ1IjoibmlraXRhYnV5b25kbyIsImEiOiJja3Y2aXZxM20wNThmMm9xdWV5NHNqYWptIn0.d48wPJak6j_XYmBP-udUzw'}
                     mapStyle='mapbox://styles/mapbox/dark-v9'
                     {...viewport} 
                     onViewportChange={nextViewport => setViewport(nextViewport)} />
-                <Link to='/' style={{ textDecoration: 'none' }}>
+                <Link to='/selectcar' style={{ textDecoration: 'none' }}>
                     <Button>Välj bil</Button>
                 </Link>
             </form>
