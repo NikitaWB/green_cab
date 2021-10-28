@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ReactMapGL from 'react-map-gl';
+import PopupCar from '../../PopupCar';
 
 
 const StyledSelect = styled.div`
 .selectbuttons{
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
-.backbutton{
+.back-btn{
     background: linear-gradient(180deg, orange 0%, #478E23 100%);
     color: white;
     font-size: 1em;
@@ -39,6 +40,8 @@ const StyledSelect = styled.div`
 `
 
 function SelectCar() {
+
+    const [buttonPopupCar, setButtonPopupCar] = useState(false)
     
     const [viewport, setViewport] = useState({
         width: '100%',
@@ -50,20 +53,25 @@ function SelectCar() {
       });
 
     return (
-        <StyledSelect>
-            <ReactMapGL
-                    mapboxApiAccessToken={'pk.eyJ1IjoibmlraXRhYnV5b25kbyIsImEiOiJja3Y2aXZxM20wNThmMm9xdWV5NHNqYWptIn0.d48wPJak6j_XYmBP-udUzw'}
-                    mapStyle='mapbox://styles/mapbox/dark-v9'
-                    {...viewport} 
-                    onViewportChange={nextViewport => setViewport(nextViewport)} />
-            <div className='selectbuttons'>
-            <Link to='/search'>
-                <button className='backbutton'>Tillbaka</button>
-            </Link>
-            <button className='selectbutton'>Bilar</button>
-            <button className='selectbutton'>Tillval</button>
-            </div>
-        </StyledSelect>
+        <div>
+            <StyledSelect>
+                <ReactMapGL
+                        mapboxApiAccessToken={'pk.eyJ1IjoibmlraXRhYnV5b25kbyIsImEiOiJja3Y2aXZxM20wNThmMm9xdWV5NHNqYWptIn0.d48wPJak6j_XYmBP-udUzw'}
+                        mapStyle='mapbox://styles/mapbox/dark-v9'
+                        {...viewport} 
+                        onViewportChange={nextViewport => setViewport(nextViewport)} />
+                <div className='selectbuttons'>
+                <Link to='/search'>
+                    <button className='back-btn'>Tillbaka</button>
+                </Link>
+                <button className='selectbutton' onClick={() => setButtonPopupCar(true)}>Bilar</button>
+                <button className='selectbutton'>Tillval</button>
+                </div>
+            </StyledSelect>
+            <PopupCar trigger={buttonPopupCar} setTrigger={setButtonPopupCar}>
+                <h3>My popup</h3>
+            </PopupCar>
+        </div>
     )
 }
 
