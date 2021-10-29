@@ -1,17 +1,17 @@
 import React from 'react'
-import './popupcar.css'
+import './PopupOption.css'
 
 
-function PopupCar(props) {
+function PopupOption(props) {
     return (props.trigger) ? (
         <div className='popup'>
             <div className='popup-inner'>
                 <button className='close-btn' onClick={() => props.setTrigger(false)} >X</button>
-                <h2>Hello from PopupCar!</h2>
+                <h2>Ändra Tillval</h2>
                 { props.children }
             </div>
         </div>
     ) : '';
 }
 
-export default PopupCar
+export default PopupOption

@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import ReactMapGL from 'react-map-gl';
-import PopupCar from '../../PopupCar';
+import PopupCar from '../PopupCar';
+import PopupOption from '../PopupOption';
 
 
 const StyledSelect = styled.div`
@@ -42,6 +43,8 @@ const StyledSelect = styled.div`
 function SelectCar() {
 
     const [buttonPopupCar, setButtonPopupCar] = useState(false)
+
+    const [buttonPopupOption, setButtonPopupOption] = useState(false)
     
     const [viewport, setViewport] = useState({
         width: '100%',
@@ -64,13 +67,16 @@ function SelectCar() {
                 <Link to='/search'>
                     <button className='back-btn'>Tillbaka</button>
                 </Link>
-                <button className='selectbutton' onClick={() => setButtonPopupCar(true)}>Bilar</button>
-                <button className='selectbutton'>Tillval</button>
+                <button className='selectbutton' onClick={() => setButtonPopupCar(true)} >Bilar</button>
+                <button className='selectbutton' onClick={() => setButtonPopupOption(true)} >Tillval</button>
                 </div>
             </StyledSelect>
             <PopupCar trigger={buttonPopupCar} setTrigger={setButtonPopupCar}>
                 <h3>My popup</h3>
             </PopupCar>
+            <PopupOption trigger={buttonPopupOption} setTrigger={setButtonPopupOption}>
+                <h3>My popup</h3>
+            </PopupOption>
         </div>
     )
 }
