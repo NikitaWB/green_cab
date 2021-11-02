@@ -73,7 +73,6 @@ function SelectCar() {
                 </div>
             </StyledSelect>
             <PopupCar trigger={buttonPopupCar} setTrigger={setButtonPopupCar}>
-                <h3>My popup</h3>
                 <SelectCarSlider />
             </PopupCar>
             <PopupOption trigger={buttonPopupOption} setTrigger={setButtonPopupOption}>

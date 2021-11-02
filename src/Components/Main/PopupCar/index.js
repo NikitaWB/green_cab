@@ -1,5 +1,6 @@
 import React from 'react'
 import './PopupCar.css'
+import { Link } from 'react-router-dom';
 
 
 function PopupCar(props) {
@@ -9,6 +10,9 @@ function PopupCar(props) {
                 <button className='close-btn' onClick={() => props.setTrigger(false)} >X</button>
                 <h2>Hur vill du resa?</h2>
                 { props.children }
+                <Link to='/confirm'>
+                    <button className='book-btn'>Boka</button>
+                </Link>
             </div>
         </div>
     ) : '';

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Landing from "./Landing";
 import SearchDestinationForm from './SearchDestinationForm';
 import SelectCar from './SelectCar';
+import Confirm from './Confirm';
 
 const StyledMain = styled.div`
 min-height: 50%;
@@ -30,6 +31,9 @@ function Main() {
                 </Route>
                 <Route path='/selectcar'>
                     <SelectCar />
+                </Route>
+                <Route path='confirm' >
+                    <Confirm />
                 </Route>
             </Switch>
         </StyledMain>
