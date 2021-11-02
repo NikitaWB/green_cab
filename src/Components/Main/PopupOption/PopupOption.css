@@ -1,4 +1,4 @@
-.popup {
+.popupoption {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,24 +11,26 @@
     align-items: center;
 }
 
-.popup-inner {
+.popupoption-inner {
     position: relative;
     padding: 30px;
     width: 100%;
-    max-width: 640px;
+    max-width: 500px;
     background-color: #081c15;
     color: white;
+    border-radius: 15px;
 }
 
 .popup-inner h2{
     color:white;
 }
 
-.popup-inner .close-btn {
+.popupoption-inner .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
     width: 20px;
     height: 20px;
     color: tomato;
+    cursor: pointer;
 }

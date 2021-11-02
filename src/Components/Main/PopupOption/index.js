@@ -4,8 +4,8 @@ import './PopupOption.css'
 
 function PopupOption(props) {
     return (props.trigger) ? (
-        <div className='popup'>
-            <div className='popup-inner'>
+        <div className='popupoption'>
+            <div className='popupoption-inner'>
                 <button className='close-btn' onClick={() => props.setTrigger(false)} >X</button>
                 <h2>Ändra Tillval</h2>
                 { props.children }

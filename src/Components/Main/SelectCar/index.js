@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ReactMapGL from 'react-map-gl';
 import PopupCar from '../PopupCar';
 import PopupOption from '../PopupOption';
+import SelectCarSlider from '../SelectCarSlider';
 
 
 const StyledSelect = styled.div`
@@ -73,6 +74,7 @@ function SelectCar() {
             </StyledSelect>
             <PopupCar trigger={buttonPopupCar} setTrigger={setButtonPopupCar}>
                 <h3>My popup</h3>
+                <SelectCarSlider />
             </PopupCar>
             <PopupOption trigger={buttonPopupOption} setTrigger={setButtonPopupOption}>
                 <h3>My popup</h3>

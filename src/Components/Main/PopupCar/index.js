@@ -4,10 +4,10 @@ import './PopupCar.css'
 
 function PopupCar(props) {
     return (props.trigger) ? (
-        <div className='popup'>
-            <div className='popup-inner'>
+        <div className='popupcar'>
+            <div className='popupcar-inner'>
                 <button className='close-btn' onClick={() => props.setTrigger(false)} >X</button>
-                <h2>Våra Bilar</h2>
+                <h2>Hur vill du resa?</h2>
                 { props.children }
             </div>
         </div>
