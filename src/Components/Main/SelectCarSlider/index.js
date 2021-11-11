@@ -39,7 +39,7 @@ function SelectCarSlider() {
                         <p>{obj.price} kr</p>
                         <p>{obj.info}</p>
                         <p>Upp till {obj.passenger} passagerare</p>
-                        <p>Djur eller bilbarnstol: {obj.option}</p>
+                        <p>Tar djur/bilbarnstol: {obj.option}</p>
                     </div>
                 )
             })}

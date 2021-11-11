@@ -50,9 +50,9 @@ function SelectCar() {
     const [viewport, setViewport] = useState({
         width: '100%',
         height: '550px',
-        latitude: 59.33258,
-        longitude: 18.0649,
-        zoom: 11
+        latitude: 59.234332396,
+        longitude: 18.100999596,
+        zoom: 13
         
       });
 
@@ -76,7 +76,6 @@ function SelectCar() {
                 <SelectCarSlider />
             </PopupCar>
             <PopupOption trigger={buttonPopupOption} setTrigger={setButtonPopupOption}>
-                <h3>My popup</h3>
             </PopupOption>
         </div>
     )
