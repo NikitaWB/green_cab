@@ -37,7 +37,7 @@
 ## About The Project
 
 <p align="center">
-    <img src="public\imgages\GreenCab-prototyp.jpg" alt="Screenshot">
+    <img src="public\images\GreenCab-prototyp.jpg" alt="Screenshot">
 </p>
 
 ### Built With
