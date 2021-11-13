@@ -37,7 +37,7 @@
 ## About The Project
 
 <p align="center">
-    <img src="src\img\bev-iphone11promax.svg" alt="Screenshot">
+    <img src="public\imgages\GreenCab-prototyp.jpg" alt="Screenshot">
 </p>
 
 ### Built With
@@ -68,10 +68,14 @@ To setup this project locally you may follow the installation steps below.
 
 ## Usage
 
-In the landing page, you find the currency converter and the chart that shows the historic value of a given currency against the base currency.
 
-Once logged in, you are redirected to the Home page where you can build a list of the currencies you own or want to track. You can also add the date of purchase for the currency see the performance of the given currency against the a base currency of your choosing.
+This is an app similar to Über where you should be able to search for a taxi but the idea is that you should only find electric or hybrid cars.
 
+First you choose where you want to go from, where you want to go to and when.
+
+After that, you choose the type of car you want to ride with where you also see the cost.
+
+The third step is to review your booking and confirm it.
 
 
 ## Contact
