@@ -16,7 +16,7 @@
     padding: 30px;
     width: 100%;
     max-width: 640px;
-    height: 75vh;
+    height: 600px;
     background-color: #081c15;
     color: white;
     border-radius: 15px;
@@ -37,7 +37,7 @@
     cursor: pointer;
 }
 
-.popupcar-inner .book-btn {
+.popupcar .book-btn {
     background: linear-gradient(180deg, #8CC96D 0%, #478E23 100%);
     color: white;
     font-size: 1em;

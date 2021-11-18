@@ -35,7 +35,7 @@ function SelectCarSlider() {
                 return (
                     <div className={slideIndex === index + 1 ? 'slide active-anim' : 'slide'} key={obj.id} >
                         <p>{obj.title}</p>
-                        <img src={process.env.PUBLIC_URL + `/images/img${index + 1}.jpg`} alt='' />
+                        <img src={process.env.PUBLIC_URL + `/images/img${index + 1}.jpg`} alt='caroption' />
                         <p>{obj.price} kr</p>
                         <p>{obj.info}</p>
                         <p>Upp till {obj.passenger} passagerare</p>

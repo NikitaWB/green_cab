@@ -45,6 +45,7 @@
 - [React](https://reactjs.org/)
 - [styled-components](https://styled-components.com/)
 - [React-router-dom](https://reactrouter.com/web/guides/quick-start)
+- [Mapbox](https://www.mapbox.com/)
 
 
 ## Getting Started
