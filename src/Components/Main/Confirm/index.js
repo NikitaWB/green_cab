@@ -5,6 +5,7 @@ import ReactMapGL from 'react-map-gl';
 import Glass from './Glass';
 
 const StyledConfirm = styled.div`
+
 .selectbuttons{
     margin-top: 1.2rem;
 }

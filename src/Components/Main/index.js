@@ -6,6 +6,7 @@ import SearchDestinationForm from './SearchDestinationForm';
 import SelectCar from './SelectCar';
 import Confirm from './Confirm';
 import Overview from './Overview';
+import CancelTrip from './CancelTrip';
 
 const StyledMain = styled.div`
 min-height: 50%;
@@ -38,6 +39,9 @@ function Main() {
                 </Route>
                 <Route path='/overview'>
                     <Overview />
+                </Route>
+                <Route path='/cancel-trip'>
+                    <CancelTrip />
                 </Route>
             </Switch>
         </StyledMain>

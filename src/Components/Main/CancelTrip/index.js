@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
-import { Link } from 'react-router-dom';
-import { Button } from '../../../GlobalStyle';
+import Glass2 from './Glass2';
 
-function Overview() {
+function CancelTrip() {
+
   const [viewport, setViewport] = useState({
     width: '100%',
-    height: '60vh',
+    height: '100vh',
     latitude: 59.234332396,
     longitude: 18.100999596,
     zoom: 13,
@@ -14,6 +14,7 @@ function Overview() {
 
   return (
     <div>
+      <Glass2 />
       <ReactMapGL
         mapboxApiAccessToken={
           'pk.eyJ1IjoibmlraXRhYnV5b25kbyIsImEiOiJja3Y2aXZxM20wNThmMm9xdWV5NHNqYWptIn0.d48wPJak6j_XYmBP-udUzw'
@@ -22,17 +23,8 @@ function Overview() {
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
       />
-      <br />
-      <p>Din gröna taxi anländer om ca 5 min</p>
-      <br />
-      <p>Beräknad ankomsttid till slutdestination 17:59</p>
-      <p>Trevlig resa!</p>
-      <br />
-      <Link to='/cancel-trip'>
-        <Button>Avboka resa</Button>
-      </Link>
     </div>
   );
 }
 
-export default Overview;
+export default CancelTrip;
