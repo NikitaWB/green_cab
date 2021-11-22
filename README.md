@@ -46,6 +46,7 @@
 - [styled-components](https://styled-components.com/)
 - [React-router-dom](https://reactrouter.com/web/guides/quick-start)
 - [Mapbox](https://www.mapbox.com/)
+- [Figma](https://www.figma.com/) Go to the ux folder to find the link to the prototyp.
 
 
 ## Getting Started
